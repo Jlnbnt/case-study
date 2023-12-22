@@ -1,0 +1,18 @@
+{
+  "bail": true,
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": "..",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "coverageDirectory": "./test/coverage/e2e",
+  "globalSetup": "<rootDir>/test/globalSetup.ts",
+  "setupFilesAfterEnv": ["<rootDir>/test/setup.ts", "jest-extended/all"],
+  "testTimeout": 200000,
+  "collectCoverageFrom": ["src/**/*.ts"],
+  "coveragePathIgnorePatterns": ["<rootDir>/src/main.ts", ".spec.ts"],
+  "slowTestThreshold": 20,
+  "maxWorkers": "50%"
+}
